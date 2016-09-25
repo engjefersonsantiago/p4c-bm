@@ -885,7 +885,7 @@ def dump_actions(json_dict, hlir, p4_v1_1=False):
                     if primitive_name == "generate_digest":
                         id_ = field_list_to_learn_id(arg)
                     elif "clone" in primitive_name or\
-                         primitive_name in {"resubmit", "recirculate"}:
+                         primitive_name in {"resubmit", "recirculate", "modify_and_resubmit"}:
                         id_ = field_list_to_id(arg)
                     arg_dict["type"] = "hexstr"
                     arg_dict["value"] = format_hexstr(id_)
